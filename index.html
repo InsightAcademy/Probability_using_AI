@@ -67,7 +67,7 @@ body{
 #result {
     font-size: 24px;
     font-weight: bold;
-    color: #00698f;
+    color: blue;
 }
 #cut-off-form{
     border: 1px solid rgb(204, 202, 202);
@@ -81,14 +81,14 @@ body{
 <body>
     <div class="container">
      <div class="notice">
-        <p><strong style="color: red;">
-            Important Notice: 
+        <p><strong style="color: red;" >
+            Important Notice 
         </strong> This calculator estimates cut off marks and selection probabilities using: 
-        <ol>
+        <ul>
             <li>Historical Dataset (2022)</li>
             <li>Linear regression modelling</li>
             <li>Artificial intelligence algorithm</li>
-        </ol>   
+        </ul>   
         Predictive results are subject to  probable percentage of error 05% to 10% due to fectors like : 
         <ul>
             <li>Examination Perfomance Fluctuations</li>
@@ -102,7 +102,8 @@ body{
      </div>
      <br>
         <form id="cut-off-form">
-            <h2 style="text-align: center;">SELECTION PROBABILITY</h2>
+            <h2 style="text-align: center;">ESTIMATED SELECTION PROBABILITY</h2>
+            <hr>
             <div class="form-group">
                 <label for="category">Select your Category:</label> <br><br>
                 <select id="category" class="input-field">
@@ -124,6 +125,7 @@ body{
             <button class="button" onclick="calculateChancePercentage(event)">Calculate Chance Percentage</button>
             <div id="result">
                 <p id="chance-percentage"></p>
+                <br>
                 <p id="result-message"></p>
             </div>
         </form>
